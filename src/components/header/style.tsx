@@ -12,6 +12,9 @@ export const Container = styled.header`
   font-family: ${themes.fontFamily};
   font-size: ${themes.fontSizeForm};
   img {
-    background-color: ${themes.colorPrimary};
+    cursor: pointer;
+    :hover {
+      color: black;
+    }
   }
 `;
