@@ -17,4 +17,7 @@ export const Container = styled.header`
       color: black;
     }
   }
+  .exit {
+    cursor: pointer;
+  }
 `;

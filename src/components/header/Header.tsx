@@ -8,10 +8,12 @@ interface PropsHeader {
 export default function Header({ title, info, save, exit }: PropsHeader) {
   return (
     <S.Container>
-      <div>{title}</div>
-      <img src={info} alt={info} />
-      <img src={save} alt={save} />
-      <div>{exit}</div>
+      <div title="Author Jorge Gurgel">{title}</div>
+      <img title="View/adc notes" src={info} alt={info} />
+      <img title="Save note current" src={save} alt={save} />
+      <div title="Exit" className="exit">
+        {exit}
+      </div>
     </S.Container>
   );
 }
