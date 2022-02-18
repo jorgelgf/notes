@@ -6,4 +6,5 @@ export const Container = styled.div`
   margin: 10px 10px;
   background-color: ${themes.colorPrimary};
   box-shadow: 2px 2px 10px 2px ${themes.colorSecondary};
+  border-radius: 9px 9px 5px 5px;
 `;

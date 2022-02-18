@@ -12,4 +12,5 @@ export const Container = styled.textarea`
   height: 600px;
   border: none;
   outline: none;
+  overflow-y: hidden;
 `;
