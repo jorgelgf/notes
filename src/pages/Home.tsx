@@ -1,5 +1,4 @@
 import Layout from "../components/layout/Layout";
-import { themes } from "../themes/themes";
 import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 export default function Home() {
@@ -21,7 +20,7 @@ export default function Home() {
         <S.HomeHeader>
           <b>Minhas notas</b>
         </S.HomeHeader>
-        <S.Items onClick={() => nav("/notes")}>+ Novas notas</S.Items>
+        <S.Items onClick={() => nav("/notes")}> + Novas notas</S.Items>
       </Layout>
     </S.Container>
   );

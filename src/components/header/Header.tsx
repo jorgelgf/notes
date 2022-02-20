@@ -10,10 +10,14 @@ interface PropsHeader {
 }
 export default function Header({ title, info, save, exit }: PropsHeader) {
   const [modal, setModal] = useState<true | false>(false);
+  const saveLocal = localStorage;
 
   const nav = useNavigate();
   function handleClick() {
     setModal(!modal);
+  }
+  function handleClickSave() {
+    console.log(saveLocal.getItem("local"));
   }
 
   function fullElement() {
@@ -27,7 +31,12 @@ export default function Header({ title, info, save, exit }: PropsHeader) {
             src={info}
             alt={info}
           />
-          <img title="Save note current" src={save} alt={save} />
+          <img
+            title="Save note current"
+            src={save}
+            alt={save}
+            onClick={handleClickSave}
+          />
           <div title="Exit" className="exit" onClick={() => nav("/")}>
             {exit}
           </div>
@@ -46,5 +55,6 @@ export default function Header({ title, info, save, exit }: PropsHeader) {
     );
   }
 
+  //
   return <>{fullElement()}</>;
 }

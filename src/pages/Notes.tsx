@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Text from "../components/form/Text";
 import Header from "../components/header/Header";
 import Layout from "../components/layout/Layout";
@@ -9,8 +9,18 @@ import * as S from "./style";
 
 export default function Notes() {
   const [text, setText] = useState<string>("");
+  const [note, setNote] = useState<string | null>(null);
+  const saveLocal = localStorage;
 
-  const handleChange = (event: any) => setText(event.target.value);
+  useEffect(() => {
+    let note = prompt("nome da nota");
+    setNote(note);
+  }, []);
+  const handleChange = (event: any) => {
+    setText(event.target.value);
+  };
+  if (note) saveLocal.setItem(note, text);
+
   return (
     <S.Container>
       <Layout>
