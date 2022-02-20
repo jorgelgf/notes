@@ -1,23 +1,26 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { GlobalContext } from "../../context";
 import * as S from "./style";
 interface PropsHeader {
   title: string;
   info: string;
-  save: string;
   exit: string;
   onClick?: any;
 }
-export default function Header({ title, info, save, exit }: PropsHeader) {
+export default function Header({ title, info, exit }: PropsHeader) {
   const [modal, setModal] = useState<true | false>(false);
-  const saveLocal = localStorage;
+
+  const valueContext = useContext(GlobalContext);
 
   const nav = useNavigate();
   function handleClick() {
     setModal(!modal);
   }
-  function handleClickSave() {
-    console.log(saveLocal.getItem("local"));
+
+  function handleClickExit() {
+    valueContext.setState({});
+    nav("/");
   }
 
   function fullElement() {
@@ -31,13 +34,8 @@ export default function Header({ title, info, save, exit }: PropsHeader) {
             src={info}
             alt={info}
           />
-          <img
-            title="Save note current"
-            src={save}
-            alt={save}
-            onClick={handleClickSave}
-          />
-          <div title="Exit" className="exit" onClick={() => nav("/")}>
+
+          <div title="Exit" className="exit" onClick={handleClickExit}>
             {exit}
           </div>
         </S.Container>

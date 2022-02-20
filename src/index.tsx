@@ -5,14 +5,16 @@ import App from "./App";
 import * as S from "./themes/GlobalStyle";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-
+import DivContext from "./context/index";
 ReactDOM.render(
   <BrowserRouter>
-    <React.StrictMode>
-      <S.ContainerGlobal>
-        <App />
-      </S.ContainerGlobal>
-    </React.StrictMode>
+    <DivContext>
+      <React.StrictMode>
+        <S.ContainerGlobal>
+          <App />
+        </S.ContainerGlobal>
+      </React.StrictMode>
+    </DivContext>
   </BrowserRouter>,
   document.getElementById("root")
 );
