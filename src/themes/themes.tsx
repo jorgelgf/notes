@@ -5,4 +5,5 @@ export const themes = {
   fontSizeForm: "16",
   FontSizeHeader: "12",
   fontHomeTitle: "'Redressed', cursive",
+  cancelColor: "#f70707",
 };

@@ -13,6 +13,74 @@ export const Container = styled.div`
   z-index: 0;
 `;
 
+//Notes
+
+export const DivNameNote = styled.div`
+  font-family: ${themes.fontFamily};
+  display: flex;
+  margin: 100px auto;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 20%;
+  flex-direction: column;
+  span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 0.5px solid ${themes.colorSecondary};
+    border-bottom: 0.5px solid ${themes.colorSecondary};
+
+    margin-bottom: 30px;
+
+    b {
+      font-size: 20px;
+    }
+    div {
+      transition: 0.5s ease;
+      padding: 0.5em 0.8em;
+      border-radius: 2px;
+      cursor: pointer;
+
+      :hover {
+        background-color: ${themes.cancelColor};
+      }
+    }
+  }
+`;
+export const NameNote = styled.input`
+  width: 85%;
+  border: none;
+  height: 20px;
+  outline: none;
+  padding: 0.5em;
+  transition: 0.2s ease;
+  color: ${themes.colorSecondary};
+  :hover {
+    box-shadow: 0.1px 0.1px 3px 0.1px ${themes.colorSecondary};
+  }
+  @media (max-width: 435px) {
+    width: 70%;
+  }
+`;
+export const Button = styled.button`
+  background-color: #146914;
+  color: ${themes.colorPrimary};
+  border-color: ${themes.colorPrimary};
+  border: 1px solid;
+
+  padding: 0.5em;
+  margin-top: 1em;
+  cursor: pointer;
+  transition: 0.5s ease;
+  border-radius: 2px;
+  :hover {
+    color: white;
+    background-color: #0a8f0a;
+  }
+`;
+
 //Home
 
 export const DivItems = styled.div`
@@ -28,7 +96,7 @@ export const DivItems = styled.div`
     cursor: pointer;
     transition: 0.5s ease;
     :hover {
-      background-color: #f70707;
+      background-color: ${themes.cancelColor};
       color: #ffebeb;
     }
   }

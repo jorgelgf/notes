@@ -42,7 +42,10 @@ export default function Home() {
                   x
                 </div>
                 <S.Items
-                  style={{ width: "90%", justifyContent: "space-between" }}
+                  style={{
+                    width: "90%",
+                    justifyContent: "space-between",
+                  }}
                   onClick={() => {
                     setState({ e });
                     nav("/notes");
