@@ -4,4 +4,5 @@ export const themes = {
   colorSecondary: "#2A2B05",
   fontSizeForm: "16",
   FontSizeHeader: "12",
+  fontHomeTitle: "'Redressed', cursive",
 };

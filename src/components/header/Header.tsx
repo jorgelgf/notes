@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 interface PropsHeader {
   title: string;
@@ -9,6 +10,8 @@ interface PropsHeader {
 }
 export default function Header({ title, info, save, exit }: PropsHeader) {
   const [modal, setModal] = useState<true | false>(false);
+
+  const nav = useNavigate();
   function handleClick() {
     setModal(!modal);
   }
@@ -25,7 +28,7 @@ export default function Header({ title, info, save, exit }: PropsHeader) {
             alt={info}
           />
           <img title="Save note current" src={save} alt={save} />
-          <div title="Exit" className="exit">
+          <div title="Exit" className="exit" onClick={() => nav("/")}>
             {exit}
           </div>
         </S.Container>

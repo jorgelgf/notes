@@ -9,7 +9,7 @@ export const Container = styled.textarea`
   resize: none;
   margin: 1em;
   width: 90%;
-  height: 600px;
+  height: 80%;
   border: none;
   outline: none;
   overflow-y: hidden;

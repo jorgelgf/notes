@@ -15,10 +15,7 @@ export const Container = styled.header`
   z-index: 1;
   img {
     cursor: pointer;
-    transition: 0.2s ease;
-    :hover {
-      width: 30px;
-    }
+    transition: all 0.3s ease;
   }
   .exit {
     cursor: pointer;
@@ -28,7 +25,7 @@ export const Container = styled.header`
 export const ModalInf = styled.div`
   position: fixed;
   top: 5%;
-  left: 45.5%;
+  left: 35.5%;
   display: flex;
   border-radius: 2px;
   flex-direction: column;
@@ -41,7 +38,7 @@ export const ModalInf = styled.div`
   color: ${themes.colorSecondary};
   font-family: ${themes.fontFamily};
   font-size: 14px;
-  z-index: 1;
+  z-index: 0;
   transition: 0.2s ease;
 
   background-color: ${themes.colorSecondary};
@@ -66,13 +63,21 @@ export const ModalInf = styled.div`
     }
   }
   @media (max-width: 485px) {
-    left: 41%;
+    left: 30%;
   }
-  @media (max-width: 900px) {
-    left: 44%;
-  }
+
   @media (min-height: 700px) {
     top: 7%;
+  }
+  @media (max-width: 900px) {
+    left: 35%;
+  }
+
+  @media (min-height: 650px) {
+    top: 5%;
+  }
+  @media (min-height: 920px) {
+    top: 2%;
   }
   transform: translateY(-10px);
   animation: animeTop 0.4s forwards;
@@ -86,10 +91,11 @@ export const ModalInf = styled.div`
 
 export const OverLay = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  top: -300px;
+  left: -750px;
+  width: 1700px;
+  height: 1700px;
   background-color: transparent;
+  border: 10px solid black;
   z-index: 0;
 `;
