@@ -8,12 +8,12 @@ interface PropsHeader {
   onClick?: any;
 }
 export default function Header({ title, exit }: PropsHeader) {
-  const valueContext = useContext(GlobalContext);
+  const values = useContext(GlobalContext);
 
   const nav = useNavigate();
 
   function handleClickExit() {
-    valueContext.setState({});
+    values.setState({});
     nav("/");
   }
 
@@ -21,9 +21,13 @@ export default function Header({ title, exit }: PropsHeader) {
     return (
       <>
         <S.Container>
-          <div title="Author Jorge Gurgel">{title}</div>
+          <div>{title}</div>
 
-          <div title="Exit" className="exit" onClick={handleClickExit}>
+          <div
+            title="Exit and save note"
+            className="exit"
+            onClick={handleClickExit}
+          >
             {exit}
           </div>
         </S.Container>

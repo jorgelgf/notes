@@ -5,8 +5,8 @@ import { GlobalContext } from "../context";
 import * as S from "./style";
 export default function Home() {
   const keys = Object.keys(localStorage);
-  const value = useContext(GlobalContext);
-  const { setState } = value;
+  const values = useContext(GlobalContext);
+  const { setState } = values;
   const nav = useNavigate();
 
   const SXlayout = {

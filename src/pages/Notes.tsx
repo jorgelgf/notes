@@ -29,7 +29,7 @@ export default function Notes() {
 
   if (note) saveLocal.setItem(note, text);
 
-  //Function render note name
+  //Function render note name - new note
   function noteName() {
     return (
       <S.DivNameNote>
