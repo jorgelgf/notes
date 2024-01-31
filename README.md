@@ -1,6 +1,6 @@
 # Notes
 
-### An application notepad simple using ReactJs + Typescript with persisting data into localStorage
+### An application notepad simple using React + Typescript with persisting data into localStorage
 
 ## Desktop
 
